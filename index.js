@@ -33,7 +33,9 @@ app.use(cors());
   app.use(bodyParser.json());
   
 
-
+app.get('/', (req, res) => {
+    res.send('Development API is healthy');
+  });
 app.use('/api/v1/user', user);
 app.use('/api/v1/payer', payer);
 app.use('/api/v1/token', token);
