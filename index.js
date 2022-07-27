@@ -44,7 +44,7 @@ app.use('/api/v1/task',task);
 
 mongoose.connect('mongodb+srv://'+process.env.SERVER+':'+process.env.PASSWORD+'@production.1whchjx.mongodb.net/?retryWrites=true&w=majority')
 .then(() => {
-    app.listen(3001, () => console.log('database connected ;)'));
+    app.listen(process.env.PORT||3001, () => console.log('database connected ;)'));
 })
 .catch(err => console.log(err));
 
