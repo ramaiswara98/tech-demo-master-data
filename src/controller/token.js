@@ -88,7 +88,8 @@ exports.getTokenList = async (req,res) => {
                         const token = {
                             name:result.token[i].tokenName,
                             amount:(parseInt(amount)/1000000000),
-                            tokenId:result.token[i].tokenId
+                            tokenId:result.token[i].tokenId,
+                            address:result.token[i].address
                         }
                         newArray.push(token)
                         

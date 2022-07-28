@@ -105,7 +105,7 @@ exports.acceptRequestToken = async (req, res) => {
             }else{
                 const tokenOwnBy = {
                     tokenId:requestData.token.tokenId,
-                    tokenName:requestData.token.tokenName,
+                    tokenName:requestData.token.name,
                     address:toTokenAccount.address.toBase58()
                 }
                 User.findOneAndUpdate(
