@@ -22,7 +22,7 @@ app.use((req,res,next) => {
 })
 app.use(express.json());
 app.use(cors());
-
+app.use(express.bodyParser({limit: '50mb'}));
   
   // BodyParser Middleware
   app.use(
